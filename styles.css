@@ -1,0 +1,64 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.hero {
+  background-color: #77149e;
+  color: white;
+  padding: 50px 30px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(to left, rgb(230, 154, 230), purple);
+}
+
+.hero:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(to right, rgb(230, 154, 230), purple);
+}
+
+.hero h1 {
+  font-weight: normal;
+  font-size: 6rem;
+  margin: 0;
+}
+
+.hero h2 {
+  font-weight: normal;
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.filter-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-nav a {
+  text-decoration: none;
+  padding: 9px;
+  color: purple;
+  border: 1px solid rgb(124, 44, 124);
+  border-radius: 4px;
+  margin: 4px;
+}
