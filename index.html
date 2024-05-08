@@ -6,6 +6,7 @@
     <title>Pet Adoption List</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script type="module" src="main.js"></script>
   </head>
   <body>
     <div class="hero">
@@ -14,17 +15,23 @@
     </div>
 
     <div class="filter-nav">
-      <a href="#"> All Animals </a>
-      <a href="#"> Only Dog </a>
-      <a href="#"> Only Cats </a>
-      <a href="#"> Only Rabbits </a>
+      <a href="#" data-filter="all"> All Animals </a>
+      <a href="#" data-filter="dog">
+        <span class="only-large-screen">Only </span>dogs
+      </a>
+      <a href="#" data-filter="cat">
+        <span class="only-large-screen">Only </span>cats
+      </a>
+      <a href="#" data-filter="rabbit">
+        <span class="only-large-screen">Only </span>rabbits
+      </a>
     </div>
 
-    <div class="animals">
-      <!-- duplicate me -->
+    <div class="animals"></div>
+    <template id="animal-card">
       <div class="animal-card">
         <div class="animal-card-text">
-          <h3>Meowsalot</h3>
+          <h3></h3>
           <small>
             <span class="age">3 Years old</span> -
             <span class="species">Cat</span>
@@ -32,7 +39,7 @@
               Meowsalot is a talkative friend that loves to play and is great
               with children. He is looking for a forever home today!
             </p>
-            <a href="#">Adopt Meowsalot</a>
+            <a class="primary-btn" href="#">Adopt <span class="name"></span></a>
           </small>
         </div>
         <div class="animal-card-photo">
@@ -42,7 +49,6 @@
           />
         </div>
       </div>
-      <!-- end duplicate me -->
-    </div>
+    </template>
   </body>
 </html>

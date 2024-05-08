@@ -40,19 +40,20 @@ body {
 
 .hero h1 {
   font-weight: normal;
-  font-size: 6rem;
+  font-size: 2rem;
   margin: 0;
 }
 
 .hero h2 {
   font-weight: normal;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   margin: 0;
 }
 
 .filter-nav {
   display: flex;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .filter-nav a {
@@ -64,6 +65,20 @@ body {
   margin: 4px;
 }
 
+.filter-nav a:hover {
+  background-color: #25f8ce;
+}
+
+.filter-nav .active {
+  background-color: #1abb9c;
+  color: white;
+}
+
+.filter-nav .active:hover {
+  background-color: #1abb9c;
+  cursor: default;
+}
+
 .animals {
   max-width: 700px;
   margin: 0 auto;
@@ -71,15 +86,17 @@ body {
 
 .animal-card {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 100%;
   background-color: #f7f7f7;
   border-radius: 20px;
   overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .animal-card-photo {
   order: 1;
   grid-row: 1;
+  overflow: hidden;
 }
 
 .animal-card-photo img {
@@ -87,8 +104,65 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.animal-card:hover img {
+  transform: rotate(20deg) scale(1.4);
 }
 
 .animal-card-text {
   padding: 20px 25px;
+}
+
+.animal-card-text h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+
+.animal-card-text small {
+  color: gray;
+}
+
+.animal-card-text p {
+  margin: 0.8rem 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.primary-btn {
+  background-color: #5d106b;
+  padding: 10px;
+  color: whitesmoke;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary-btn:hover {
+  background-color: #761188;
+}
+
+.only-large-screen {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .animal-card {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .only-large-screen {
+    display: inline;
+  }
 }
