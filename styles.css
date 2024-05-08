@@ -91,10 +91,10 @@ body {
   border-radius: 20px;
   overflow: hidden;
 
-  margin-left: 5rem;
-  margin-right: 5rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .animal-card-photo {
